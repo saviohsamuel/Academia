@@ -1,0 +1,55 @@
+@use '../mixinsEplaceholders';
+@use '../variaveis';
+
+.teachers__imgs {
+    overflow: auto;
+    max-width: 100%;    
+    gap: .5rem;
+    &::-webkit-scrollbar {        
+        height: 4px;
+    }    
+    &::-webkit-scrollbar-track {
+        background: variaveis.$background;
+        border-radius: 6px;
+    }    
+    &::-webkit-scrollbar-thumb {
+        background: variaveis.$hover-color;
+        border-radius: 6px;
+    }
+}
+.card__teacher {
+    background: variaveis.$card-color; 
+    border-radius: 1.125rem;
+    text-align: center;
+    img {
+        border-radius: inherit;
+        padding: 0.625rem;
+    }
+    figcaption {
+        margin-bottom: 1.5625rem;
+        p {
+            padding-block: 1rem;
+        }
+        a {
+           @extend %social;    
+           margin-left: 0.625rem;
+        }
+    }
+}
+@media (min-width: 1280px) {
+    #teachers {
+        .teachers__imgs {
+            overflow: visible;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }    
+        .scroll-btn {
+            display: none;
+        }   
+    }    
+    .card__teacher {
+        flex: 0 1 100px;
+    }    
+}

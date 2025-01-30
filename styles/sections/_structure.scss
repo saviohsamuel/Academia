@@ -1,0 +1,42 @@
+@use '../variaveis';
+
+#structure > h2 + div {
+    text-align: center;
+    line-height: 1.7rem;    
+}
+.structure__imgs {    
+    flex-wrap: nowrap;
+    margin-block: 0.625rem 2.5rem;
+    gap: .3rem;        
+    overflow: auto;
+    scroll-behavior: smooth;    
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        height: 8px;
+    }    
+    & img {
+        height: auto;
+        width: auto;
+        max-width: 90%;        
+        border-radius: 0.625rem;
+    }
+}
+.about__enterprise {
+    margin-bottom: 2.5rem;        
+    p {        
+        margin-top: 0.625rem;
+    }
+}
+.enterprise__subtitle {
+    align-items: center;
+    gap: 0.625rem;
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
+@media (min-width: 1280px) {
+    .about__enterprise {
+        width: 50%;
+    }
+}

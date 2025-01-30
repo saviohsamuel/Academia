@@ -1,0 +1,29 @@
+@use './variaveis';
+
+.flex {
+    display: flex;
+}
+.wrapper {
+    flex-wrap: wrap;
+}
+.display-none {
+    display: none;
+}
+.btn {
+    background: variaveis.$hover-color;
+    color: variaveis.$background;
+    border-radius: 10px;
+}
+.link-hover {    
+    &:hover {        
+        color: variaveis.$hover-color;                        
+    }    
+}
+.padding-x {
+    padding-inline: 22px;
+}
+@media (min-width: 1280px) {
+    .display-none {
+        display: initial;
+    }
+}

@@ -1,0 +1,94 @@
+@use './variaveis';
+
+html {
+    scroll-behavior: smooth;
+}
+body {    
+    background: variaveis.$background;
+    color: variaveis.$text-color;
+    font: variaveis.$f-text;    
+    h2 {
+        font: variaveis.$f-heading-md;        
+        margin-block: 2.5rem;
+        text-align: center;
+    }
+    h3 {
+        font: variaveis.$f-heading-sm;        
+    }
+    a {
+        text-decoration: none;
+        color: variaveis.$text-color;                
+    }    
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 12px;
+    }    
+    &::-webkit-scrollbar-track {
+        background: variaveis.$background;
+        border-radius: 6px;
+    }    
+    &::-webkit-scrollbar-thumb {
+        background: variaveis.$hover-color;
+        border-radius: 6px;
+    }
+}
+#whatsapp .wttp {
+    position: fixed;    
+    background: #25d366;    
+    display: block;
+    text-align: center;    
+    border-radius: 3.12rem;         
+    color: #fff;
+    z-index: 9999;      
+    font-size: 1.68rem;
+    bottom: 4.37rem;
+    right: 0.5rem;        
+    width: 3.12rem;
+    height: 3.12rem;
+    line-height: 3.37rem;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);                
+        width: 3.75rem;
+        height: 3.75rem;
+        background-color: #25d366;
+        border-radius: 50%;
+        -webkit-animation: pulse-border 1500ms ease-in-out infinite;
+        animation: pulse-border 1500ms ease-in-out infinite;
+    }             
+}
+@keyframes pulse-border {
+    0%{transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: (1);}
+    100%{transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: (0);}
+}
+.scrollTop {
+    outline: none;
+    border: 0;
+    background-color: variaveis.$hover-color;
+    width: 1.87rem;
+    height: 1.87rem;    
+    border-radius: 50%;
+    position: fixed;
+    right: 1rem;
+    bottom: 1.25rem;
+    z-index: 1;
+    color: variaveis.$background;    
+    cursor: pointer;
+    opacity: 0;   
+    visibility: hidden;
+    transition: all .5s ease;   
+    font-size: 1.25rem;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        background: variaveis.$background;
+        color: variaveis.$hover-color;
+        transition: all .2s ease;        
+    }
+}

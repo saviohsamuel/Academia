@@ -1,0 +1,30 @@
+@use "./variaveis";
+
+.container__swiper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: variaveis.$background;
+    color: variaveis.$hover-color;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.left {
+        left: 3px;
+    }
+    &.right {
+        right: 3px;
+    }
+}

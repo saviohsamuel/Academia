@@ -1,0 +1,86 @@
+@use '../mixinsEplaceholders';
+@use '../variaveis';
+
+footer {    
+    nav {        
+        background: variaveis.$card-color;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding: 0.625rem;      
+        & a:nth-child(1) {            
+            h1 {
+                margin-bottom: 1rem;
+                font-size: variaveis.$h1-size;            
+                span {
+                    color: variaveis.$hover-color;
+                }
+            }
+        }  
+        & a:nth-child(2) {            
+          text-align: center;
+          font-size: 10px;
+          span {
+            color: variaveis.$hover-color;
+          }
+        } 
+    }
+}
+.container__contacts {    
+    address {
+        background: variaveis.$card-color;
+        width: 18.75rem;
+        text-align: center;
+        border-radius: 1.25rem;    
+        margin-inline: auto;
+        iframe {
+            border-radius: inherit;        
+            height: 12.5rem;
+            width: 18.125rem;        
+            padding: .5rem;
+            box-sizing: border-box;
+        }
+        p {
+            padding-block: 0.625rem;
+        }
+    }
+}
+.contacts {        
+    justify-content: center;
+    align-items: center;
+    padding-block: 1rem;    
+    ul {                
+        width: 70%;        
+        margin-top: 1rem;              
+        display: inline-block;         
+        text-align: center;       
+        & li:nth-child(1) {
+            font: variaveis.$f-heading-sm;    
+            margin-bottom: .5rem;        
+        }
+        li {
+            margin-top: .5rem;
+            align-items: center;
+            justify-content: center;
+            a {
+                align-items: center;
+                gap: .3rem;
+            }
+        }
+
+    }
+}
+.socials {    
+    margin-inline: auto;    
+    padding-block: 2.5rem;    
+    a {                
+        margin-inline: 10px;
+        @extend %social;        
+    }    
+}
+@media (min-width: 768px) {
+    footer {
+        nav {
+            margin-top: 2rem;
+        }
+    }
+}

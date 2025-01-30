@@ -1,0 +1,15 @@
+@use './variaveis';
+
+// Placeholder
+%social {    
+    &:hover {
+        svg {
+            path {
+                fill: variaveis.$hover-color;                                
+            }
+            circle {
+                stroke: variaveis.$hover-color;
+            }
+        }
+    }            
+}
